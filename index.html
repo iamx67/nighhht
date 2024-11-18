@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ночные стражи</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="sidebar">
+        <button id="patrol-section-btn">Сбор ночного патруля</button>
+        <button id="watch-section-btn">Составление отчёта дозора</button>
+    </div>
+
+    <div id="main-content">
+        <div id="patrol-section">
+            <h1>Сбор ночного патруля</h1>
+            <input type="text" id="participants-input" placeholder="Введите имена участников через запятую">
+            <button id="select-leaders-btn">Выбрать ведущих</button>
+            <div id="leaders-selection"></div>
+            <button id="assemble-patrol-btn">Собрать патруль</button>
+            <div id="patrol-output"></div>
+
+            <h2>Составление отчёта патруля</h2>
+            <select id="patrol-type">
+                <option value="Ранний">Ранний</option>
+                <option value="Поздний">Поздний</option>
+            </select>
+            <div id="violators-section">
+                <button id="violators-none-btn">Нарушителей не было</button>
+                <button id="violators-exist-btn">Нарушители были</button>
+                <input type="text" id="violators-input" placeholder="Введите имя и ID нарушителей" style="display:none;">
+            </div>
+            <button id="create-patrol-report-btn">Составить отчёт</button>
+            <div id="patrol-report-output"></div>
+        </div>
+
+        <div id="watch-section" style="display: none;">
+            <h1>Составление отчёта дозора</h1>
+            <input type="text" id="watch-time-input" placeholder="Введите часы дозора (чч:мм-чч:мм)">
+            <input type="text" id="watch-participants-input" placeholder="Введите имена участников">
+            <div id="violators-watch-section">
+                <button id="watch-violators-none-btn">Нарушителей не было</button>
+                <button id="watch-violators-exist-btn">Нарушители были</button>
+                <input type="text" id="watch-violators-input" placeholder="Введите имя и ID нарушителей" style="display:none;">
+            </div>
+            <button id="create-watch-report-btn">Составить отчёт</button>
+            <div id="watch-report-output"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
